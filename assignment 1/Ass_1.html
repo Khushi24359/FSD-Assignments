@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+            margin: 0; 
+            padding: 0;
+        }
+        .logo {
+            display: block;
+            margin: 20px auto 10px auto;
+            width: 100px; /* Adjust logo size */
+        }
+        h1 { 
+            text-align: center; 
+            margin-top: 10px; 
+        }
+        form { 
+            background: white; 
+            padding: 15px; 
+            width: 320px; 
+            margin: 20px auto; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        label { 
+            font-weight: bold; 
+            display: block; 
+            margin-bottom: 5px; 
+        }
+        input, textarea, fieldset { 
+            margin-bottom: 12px; 
+            width: 100%; 
+            padding: 8px; 
+            box-sizing: border-box; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        fieldset { 
+            padding: 10px; 
+        }
+        legend { 
+            font-weight: bold; 
+        }
+        .radio-group, .checkbox-group { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 5px; 
+        }
+        .radio-group input, .checkbox-group input { 
+            width: auto; 
+            margin-right: 5px; 
+        }
+        input[type="submit"] { 
+            background: #4CAF50; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 16px; 
+            transition: background 0.3s; 
+        }
+        input[type="submit"]:hover { 
+            background: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <!-- College Logo -->
+    <img src="mit.png" alt="College Logo" class="logo">
+
+    <h1>Event Registration</h1>
+
+    <form action="#" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="mail">Enter your Email:</label>
+        <input type="email" id="mail" name="mail" placeholder="example@email.com" required>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required>
+
+        <label for="address">Enter your Address:</label>
+        <textarea id="address" name="address" rows="3" placeholder="Your Address" required></textarea>
+
+        <label for="dob">Enter your Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <fieldset>
+            <legend>Select Gender:</legend>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Qualifications:</legend>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="qualification" value="High School"> High School</label>
+                <label><input type="checkbox" name="qualification" value="Diploma"> Diploma</label>
+                <label><input type="checkbox" name="qualification" value="Bachelors"> Bachelor's Degree</label>
+                <label><input type="checkbox" name="qualification" value="Masters"> Master's Degree</label>
+                <label><input type="checkbox" name="qualification" value="PhD"> Ph.D.</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Workshop:</legend>
+            <div class="radio-group">
+                <label><input type="radio" name="workshop" value="Cyber Security & Forensics" required> Cyber Security & Forensics</label>
+                <label><input type="radio" name="workshop" value="Artificial Intelligence"> Artificial Intelligence</label>
+                <label><input type="radio" name="workshop" value="Machine Learning"> Machine Learning</label>
+                <label><input type="radio" name="workshop" value="Data Science"> Data Science</label>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
